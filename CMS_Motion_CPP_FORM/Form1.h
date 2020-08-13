@@ -62,6 +62,8 @@ namespace CMS_MOTION_CPP_FORM {
 	private: System::Windows::Forms::Button^ btnAxis1Stop;
 	private: System::Windows::Forms::Button^ btnAxis1Homing;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::TextBox^ tbAxis1CurrVelocity;
 
 
 	public:
@@ -112,9 +114,11 @@ namespace CMS_MOTION_CPP_FORM {
 			this->tbAxis1CurrPosition = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->groupBox2 = (gcnew System::Windows::Forms::GroupBox());
-			this->label1 = (gcnew System::Windows::Forms::Label());
-			this->btnAxis1Homing = (gcnew System::Windows::Forms::Button());
 			this->btnAxis1Stop = (gcnew System::Windows::Forms::Button());
+			this->btnAxis1Homing = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->tbAxis1CurrVelocity = (gcnew System::Windows::Forms::TextBox());
 			this->groupBox1->SuspendLayout();
 			this->groupBox2->SuspendLayout();
 			this->SuspendLayout();
@@ -216,7 +220,9 @@ namespace CMS_MOTION_CPP_FORM {
 				| System::Windows::Forms::AnchorStyles::Right));
 			this->groupBox2->Controls->Add(this->btnAxis1Stop);
 			this->groupBox2->Controls->Add(this->btnAxis1Homing);
+			this->groupBox2->Controls->Add(this->label2);
 			this->groupBox2->Controls->Add(this->label1);
+			this->groupBox2->Controls->Add(this->tbAxis1CurrVelocity);
 			this->groupBox2->Controls->Add(this->tbAxis1CurrPosition);
 			this->groupBox2->Font = (gcnew System::Drawing::Font(L"±¼¸²", 14.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(129)));
@@ -226,28 +232,6 @@ namespace CMS_MOTION_CPP_FORM {
 			this->groupBox2->TabIndex = 8;
 			this->groupBox2->TabStop = false;
 			this->groupBox2->Text = L"AXIS1";
-			// 
-			// label1
-			// 
-			this->label1->AutoSize = true;
-			this->label1->Font = (gcnew System::Drawing::Font(L"±¼¸²", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(129)));
-			this->label1->Location = System::Drawing::Point(165, 34);
-			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(75, 16);
-			this->label1->TabIndex = 6;
-			this->label1->Text = L"Position";
-			// 
-			// btnAxis1Homing
-			// 
-			this->btnAxis1Homing->Font = (gcnew System::Drawing::Font(L"±¼¸²", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(129)));
-			this->btnAxis1Homing->Location = System::Drawing::Point(6, 27);
-			this->btnAxis1Homing->Name = L"btnAxis1Homing";
-			this->btnAxis1Homing->Size = System::Drawing::Size(75, 30);
-			this->btnAxis1Homing->TabIndex = 7;
-			this->btnAxis1Homing->Text = L"Homing";
-			this->btnAxis1Homing->UseVisualStyleBackColor = true;
 			// 
 			// btnAxis1Stop
 			// 
@@ -260,6 +244,50 @@ namespace CMS_MOTION_CPP_FORM {
 			this->btnAxis1Stop->TabIndex = 7;
 			this->btnAxis1Stop->Text = L"Stop";
 			this->btnAxis1Stop->UseVisualStyleBackColor = true;
+			// 
+			// btnAxis1Homing
+			// 
+			this->btnAxis1Homing->Font = (gcnew System::Drawing::Font(L"±¼¸²", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(129)));
+			this->btnAxis1Homing->Location = System::Drawing::Point(6, 27);
+			this->btnAxis1Homing->Name = L"btnAxis1Homing";
+			this->btnAxis1Homing->Size = System::Drawing::Size(75, 30);
+			this->btnAxis1Homing->TabIndex = 7;
+			this->btnAxis1Homing->Text = L"Homing";
+			this->btnAxis1Homing->UseVisualStyleBackColor = true;
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"±¼¸²", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(129)));
+			this->label1->Location = System::Drawing::Point(165, 34);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(75, 16);
+			this->label1->TabIndex = 6;
+			this->label1->Text = L"Position";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"±¼¸²", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(129)));
+			this->label2->Location = System::Drawing::Point(313, 34);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(73, 16);
+			this->label2->TabIndex = 6;
+			this->label2->Text = L"Velocity";
+			// 
+			// tbAxis1CurrVelocity
+			// 
+			this->tbAxis1CurrVelocity->BackColor = System::Drawing::Color::Black;
+			this->tbAxis1CurrVelocity->ForeColor = System::Drawing::Color::Lime;
+			this->tbAxis1CurrVelocity->Location = System::Drawing::Point(316, 53);
+			this->tbAxis1CurrVelocity->Name = L"tbAxis1CurrVelocity";
+			this->tbAxis1CurrVelocity->ReadOnly = true;
+			this->tbAxis1CurrVelocity->Size = System::Drawing::Size(100, 29);
+			this->tbAxis1CurrVelocity->TabIndex = 5;
+			this->tbAxis1CurrVelocity->Text = L"0";
 			// 
 			// Form1
 			// 
